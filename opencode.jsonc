@@ -1,0 +1,125 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "router",
+  "share": "disabled",
+  "plugin": [
+    "@ramtinj95/opencode-tokenscope@latest",
+    "@tarquinen/opencode-dcp@latest"
+  ],
+  "agent": {
+    "plan": {
+      "disable": true
+    },
+    "build": {
+      "disable": true
+    },
+    "explore": {
+      "disable": true
+    },
+    "general": {
+      "disable": true
+    }
+  },
+  "permission": {
+    "bash": {
+      "*": "ask",
+      /* Block sensitive files first */
+      "cat *.env": "ask",
+      "cat *history": "ask",
+      "cat .ssh/*": "ask",
+      "grep * .aws/*": "ask",
+      "kubectl describe secret*": "ask",
+      "ls -a": "ask",
+      "rg * .aws/*": "ask",
+      /* Then allow general usage */
+      "aws * describe-*": "allow",
+      "aws * get-*": "allow",
+      "aws * list-*": "allow",
+      "cat *": "allow",
+      "date": "allow",
+      "docker images *": "allow",
+      "docker logs *": "allow",
+      "docker ps *": "allow",
+      "du -sh *": "allow",
+      "git branch *": "allow",
+      "git diff *": "allow",
+      "git log *": "allow",
+      "git status *": "allow",
+      "grep *": "allow",
+      "grep -r *": "allow",
+      "head *": "allow",
+      "jq *": "allow",
+      "kubectl config get-contexts": "allow",
+      "kubectl describe *": "allow",
+      "kubectl get *": "allow",
+      "kubectl top *": "allow",
+      "ls *": "allow",
+      "npm run lint *": "allow",
+      "npm test *": "allow",
+      "pwd": "allow",
+      "rg *": "allow",
+      "stat *": "allow",
+      "tail *": "allow",
+      "terraform plan *": "allow",
+      "terraform show *": "allow",
+      "terraform state list *": "allow",
+      "whoami": "allow"
+    },
+    "edit": "ask",
+    "webfetch": "allow",
+    "external_directory": "ask",
+    "doom_loop": "ask"
+  },
+  "watcher": {
+    "ignore": [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/.git/**",
+      "**/out/**",
+      "**/build/**",
+      "**/coverage/**",
+      "**/.cache/**",
+      "**/**/*.log",
+      "**/.venv/**",
+      "**/__pycache__/**",
+      "**/.DS_Store"
+    ]
+  },
+  "compaction": {
+    "auto": true,
+    "prune": true,
+    "reserved": 15000
+  },
+  "instructions": [
+    ".cursor/rules/*.md",
+    "AGENTS.md",
+    "CONTRIBUTING.md"
+  ],
+  "mcp": {
+    "exa": {
+      "type": "remote",
+      "url": "https://mcp.exa.ai/mcp?exaApiKey={env:EXA_API_KEY}",
+      "enabled": true
+    },
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+      },
+      "enabled": true
+    },
+    "github": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "environment": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "{env:GITHUB_TOKEN}"
+      },
+      "enabled": true
+    }
+  }
+}
