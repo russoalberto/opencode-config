@@ -18,6 +18,9 @@
     "settings": {
       "nudgeEnabled": true,
       "nudgeFrequency": 10
+    },
+    "distill": {
+      "permission": "allow"
     }
   }
 }

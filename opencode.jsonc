@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "default_agent": "router",
+  "default_agent": "wintermute",
   "share": "disabled",
   "plugin": [
     "@ramtinj95/opencode-tokenscope@latest",
@@ -68,7 +68,8 @@
     "edit": "ask",
     "webfetch": "allow",
     "external_directory": "ask",
-    "doom_loop": "ask"
+    "doom_loop": "ask",
+    "distill": "allow"
   },
   "watcher": {
     "ignore": [
