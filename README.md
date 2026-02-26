@@ -1,0 +1,2 @@
+# opencode
+Personal opencode config
