@@ -1,5 +1,6 @@
 ---
 description: High-level technical consultation and code optimization
+model: google/gemini-flash-latest
 mode: subagent
 temperature: 0.1
 reasoningEffort: high

@@ -1,5 +1,6 @@
 ---
 description: Master Orchestrator, Intent Classifier, and Task Delegator
+model: google/gemini-flash-latest
 temperature: 0.2
 reasoningEffort: high
 textVerbosity: low

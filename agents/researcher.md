@@ -1,5 +1,6 @@
 ---
 description: Documentation and technical research specialist
+model: google/gemini-flash-lite-latest
 mode: subagent
 temperature: 0.1
 reasoningEffort: medium

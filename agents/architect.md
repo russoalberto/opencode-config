@@ -1,5 +1,6 @@
 ---
 description: High-level architecture consultant
+model: google/gemini-3.1-pro-preview
 mode: subagent
 temperature: 0.1
 reasoningEffort: high

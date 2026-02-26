@@ -1,5 +1,6 @@
 ---
 description: Precision-focused coding support
+model: google/gemini-flash-latest
 mode: subagent
 temperature: 0.2
 reasoningEffort: high

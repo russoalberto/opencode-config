@@ -1,5 +1,6 @@
 ---
 description: Root-cause analysis specialist
+model: google/gemini-flash-latest
 mode: subagent
 temperature: 0.0
 reasoningEffort: high
