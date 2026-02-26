@@ -1,7 +1,8 @@
 ---
 description: Precision-focused coding support
+model: opencode-go/minimax-m2.5
 mode: subagent
-temperature: 0.2
+temperature: 0.0
 reasoningEffort: high
 textVerbosity: low
 ---

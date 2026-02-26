@@ -1,5 +1,6 @@
 ---
 description: Root-cause analysis specialist
+model: opencode-go/glm-5
 mode: subagent
 temperature: 0.0
 reasoningEffort: high

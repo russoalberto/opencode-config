@@ -1,7 +1,8 @@
 ---
 description: High-level technical consultation and code optimization
+model: opencode-go/minimax-m2.5
 mode: subagent
-temperature: 0.1
+temperature: 0.0
 reasoningEffort: high
 textVerbosity: medium
 tools:

@@ -1,6 +1,7 @@
 ---
 description: Master Orchestrator, Intent Classifier, and Task Delegator
-temperature: 0.2
+model: opencode-go/minimax-m2.5
+temperature: 0.0
 reasoningEffort: high
 textVerbosity: low
 tools:

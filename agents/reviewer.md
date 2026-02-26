@@ -1,5 +1,6 @@
 ---
 description: Code quality and security auditor
+model: opencode-go/kimi-k2.5
 mode: subagent
 temperature: 0.0
 reasoningEffort: high

@@ -1,5 +1,6 @@
 ---
 description: Documentation and technical research specialist
+model: opencode-go/kimi-k2.5
 mode: subagent
 temperature: 0.1
 reasoningEffort: medium
