@@ -1,7 +1,8 @@
 ---
 description: High-level architecture consultant
+model: deepseek/deepseek-reasoner
 mode: subagent
-temperature: 0.1
+temperature: 0.0
 reasoningEffort: high
 ---
 

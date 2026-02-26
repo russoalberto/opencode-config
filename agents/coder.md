@@ -1,5 +1,6 @@
 ---
 description: Precision-focused coding support
+model: deepseek/deepseek-chat
 mode: subagent
 temperature: 0.2
 reasoningEffort: high

@@ -1,5 +1,6 @@
 ---
 description: High-level technical consultation and code optimization
+model: deepseek/deepseek-reasoner
 mode: subagent
 temperature: 0.1
 reasoningEffort: high

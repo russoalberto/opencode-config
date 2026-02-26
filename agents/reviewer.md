@@ -1,5 +1,6 @@
 ---
 description: Code quality and security auditor
+model: deepseek/deepseek-reasoner
 mode: subagent
 temperature: 0.0
 reasoningEffort: high

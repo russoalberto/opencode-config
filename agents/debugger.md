@@ -1,5 +1,6 @@
 ---
 description: Root-cause analysis specialist
+model: deepseek/deepseek-reasoner
 mode: subagent
 temperature: 0.0
 reasoningEffort: high
