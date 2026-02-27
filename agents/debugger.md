@@ -1,5 +1,6 @@
 ---
 description: Root-cause analysis specialist
+model: nano-gpt/minimax/minimax-m2.5
 mode: subagent
 temperature: 0.0
 reasoningEffort: high

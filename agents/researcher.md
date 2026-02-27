@@ -1,5 +1,6 @@
 ---
 description: Documentation and technical research specialist
+model: nano-gpt/moonshotai/kimi-k2.5
 mode: subagent
 temperature: 0.1
 reasoningEffort: medium

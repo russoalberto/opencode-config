@@ -1,5 +1,6 @@
 ---
 description: High-level architecture consultant
+model: nano-gpt/zai-org/glm-5:thinking
 mode: subagent
 temperature: 0.1
 reasoningEffort: high

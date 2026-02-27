@@ -1,5 +1,6 @@
 ---
 description: Master Orchestrator, Intent Classifier, and Task Delegator
+model: nano-gpt/minimax/minimax-m2.5
 temperature: 0.2
 reasoningEffort: high
 textVerbosity: low

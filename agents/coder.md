@@ -1,5 +1,6 @@
 ---
 description: Precision-focused coding support
+model: nano-gpt/qwen/qwen3-coder
 mode: subagent
 temperature: 0.2
 reasoningEffort: high

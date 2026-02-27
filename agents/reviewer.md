@@ -1,5 +1,6 @@
 ---
 description: Code quality and security auditor
+model: nano-gpt/qwen/qwen3.5-397b-a17b
 mode: subagent
 temperature: 0.0
 reasoningEffort: high

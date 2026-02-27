@@ -1,5 +1,6 @@
 ---
 description: High-level technical consultation and code optimization
+model: nano-gpt/meta-llama/llama-3.3-70b-instruct
 mode: subagent
 temperature: 0.1
 reasoningEffort: high
