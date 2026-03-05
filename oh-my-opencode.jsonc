@@ -1,58 +1,46 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/dev/assets/oh-my-opencode.schema.json",
   "agents": {
+    "sisyphus": {
+      "model": "nano-gpt/moonshotai/kimi-k2.5-thinking"
+    },
     "hephaestus": {
-      "model": "opencode/glm-4.7-free"
+      "model": "nano-gpt/qwen/qwen3-coder"
     },
     "oracle": {
-      "model": "opencode/glm-4.7-free"
+      "model": "nano-gpt/zai-org/glm-5:thinking"
     },
     "librarian": {
-      "model": "opencode/glm-4.7-free"
+      "model": "nano-gpt/moonshotai/kimi-k2.5"
     },
     "explore": {
-      "model": "opencode/glm-4.7-free"
-    },
-    "multimodal-looker": {
-      "model": "opencode/glm-4.7-free"
-    },
-    "prometheus": {
-      "model": "opencode/glm-4.7-free"
+      "model": "nano-gpt/minimax/minimax-m2.5"
     },
     "metis": {
-      "model": "opencode/glm-4.7-free"
+      "model": "nano-gpt/qwen/qwen3.5-plus-thinking"
     },
     "momus": {
-      "model": "opencode/glm-4.7-free"
+      "model": "nano-gpt/zai-org/glm-5-original:thinking"
+    },
+    "prometheus": {
+      "model": "nano-gpt/zai-org/glm-4.7:thinking"
     },
     "atlas": {
-      "model": "opencode/glm-4.7-free"
+      "model": "nano-gpt/meta-llama/llama-3.3-70b-instruct"
     }
   },
   "categories": {
-    "visual-engineering": {
-      "model": "opencode/glm-4.7-free"
-    },
     "ultrabrain": {
-      "model": "opencode/glm-4.7-free"
+      "model": "nano-gpt/qwen/qwen3.5-397b-a17b-thinking"
     },
     "deep": {
-      "model": "opencode/glm-4.7-free"
+      "model": "nano-gpt/moonshotai/kimi-k2.5-thinking"
     },
-    "artistry": {
-      "model": "opencode/glm-4.7-free"
+    "visual-engineering": {
+      "model": "nano-gpt/qwen/qwen3.5-plus"
     },
     "quick": {
-      "model": "opencode/glm-4.7-free"
-    },
-    "unspecified-low": {
-      "model": "opencode/glm-4.7-free"
-    },
-    "unspecified-high": {
-      "model": "opencode/glm-4.7-free"
-    },
-    "writing": {
-      "model": "opencode/glm-4.7-free"
+      "model": "nano-gpt/minimax/minimax-m2.5"
     }
   }
 }
