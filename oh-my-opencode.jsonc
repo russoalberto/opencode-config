@@ -1,58 +1,46 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/dev/assets/oh-my-opencode.schema.json",
   "agents": {
+    "sisyphus": {
+      "model": "google/gemini-3-flash-preview"
+    },
     "hephaestus": {
-      "model": "opencode/glm-4.7-free"
+      "model": "google/gemini-3.1-pro-preview"
     },
     "oracle": {
-      "model": "opencode/glm-4.7-free"
+      "model": "google/gemini-3.1-pro-preview"
     },
     "librarian": {
-      "model": "opencode/glm-4.7-free"
+      "model": "google/gemini-flash-lite-latest"
     },
     "explore": {
-      "model": "opencode/glm-4.7-free"
-    },
-    "multimodal-looker": {
-      "model": "opencode/glm-4.7-free"
-    },
-    "prometheus": {
-      "model": "opencode/glm-4.7-free"
+      "model": "google/gemini-flash-lite-latest"
     },
     "metis": {
-      "model": "opencode/glm-4.7-free"
+      "model": "google/gemini-3-flash-preview"
     },
     "momus": {
-      "model": "opencode/glm-4.7-free"
+      "model": "google/gemini-3-flash-preview"
+    },
+    "prometheus": {
+      "model": "google/gemini-3.1-pro-preview"
     },
     "atlas": {
-      "model": "opencode/glm-4.7-free"
+      "model": "google/gemini-3-flash-preview"
     }
   },
   "categories": {
-    "visual-engineering": {
-      "model": "opencode/glm-4.7-free"
-    },
     "ultrabrain": {
-      "model": "opencode/glm-4.7-free"
+      "model": "google/gemini-3.1-pro-preview"
     },
     "deep": {
-      "model": "opencode/glm-4.7-free"
+      "model": "google/gemini-3.1-pro-preview"
     },
-    "artistry": {
-      "model": "opencode/glm-4.7-free"
+    "visual-engineering": {
+      "model": "google/gemini-3-flash-preview"
     },
     "quick": {
-      "model": "opencode/glm-4.7-free"
-    },
-    "unspecified-low": {
-      "model": "opencode/glm-4.7-free"
-    },
-    "unspecified-high": {
-      "model": "opencode/glm-4.7-free"
-    },
-    "writing": {
-      "model": "opencode/glm-4.7-free"
+      "model": "google/gemini-flash-lite-latest"
     }
   }
 }
