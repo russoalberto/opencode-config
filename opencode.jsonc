@@ -1,6 +1,31 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "share": "disabled",
+  "model": "google/gemini-3-flash-preview",
+  "small_model": "google/gemini-3.1-flash-lite-preview",
+  "agent": {
+    "plan": {
+      "model": "google/gemini-3.1-pro-preview"
+    },
+    "build": {
+      "model": "google/gemini-3-flash-preview"
+    },
+    "explore": {
+      "model": "google/gemini-3.1-flash-lite-preview"
+    },
+    "general": {
+      "model": "google/gemini-3-flash-preview"
+    },
+    "compaction": {
+      "model": "google/gemini-3.1-flash-lite-preview"
+    },
+    "summary": {
+      "model": "google/gemini-3.1-flash-lite-preview"
+    },
+    "title": {
+      "model": "google/gemini-3.1-flash-lite-preview"
+    }
+  },
   "plugin": [
     "@tarquinen/opencode-dcp@latest",
     "superpowers@git+https://github.com/obra/superpowers.git",
