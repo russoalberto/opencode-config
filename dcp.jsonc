@@ -10,7 +10,35 @@
   },
   "compress": {
     "maxContextLimit": 120000,
-    "minContextLimit": 20000
+    "minContextLimit": 20000,
+    "modelMinLimits": {
+      "opencode-go/glm-5.1": 25000,
+      "opencode-go/kimi-k2.5": "30%",
+      "opencode-go/mimo-v2-pro": "40%",
+      "opencode-go/minimax-m2.5": 8000,
+      "opencode-go/minimax-m2.7": 18000,
+      "opencode-go/glm-5": 20000,
+      "opencode-go/mimo-v2-omni": 15000,
+      "opencode-go/qwen3.6-plus": 25000,
+      "opencode-go/qwen3.5-plus": 20000,
+      "opencode-go/kimi-k2.6": 20000,
+      "opencode-go/mimo-v2.5": 15000,
+      "opencode-go/mimo-v2.5-pro": "40%"
+    },
+    "modelMaxLimits": {
+      "opencode-go/glm-5.1": 65000,
+      "opencode-go/kimi-k2.5": "70%",
+      "opencode-go/mimo-v2-pro": "75%",
+      "opencode-go/minimax-m2.5": 25000,
+      "opencode-go/minimax-m2.7": 45000,
+      "opencode-go/glm-5": 55000,
+      "opencode-go/mimo-v2-omni": 50000,
+      "opencode-go/qwen3.6-plus": "70%",
+      "opencode-go/qwen3.5-plus": "65%",
+      "opencode-go/kimi-k2.6": 55000,
+      "opencode-go/mimo-v2.5": 50000,
+      "opencode-go/mimo-v2.5-pro": "75%"
+    }
   },
   "strategies": {
     "deduplication": {
