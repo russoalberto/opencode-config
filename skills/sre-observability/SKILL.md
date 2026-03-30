@@ -1,3 +1,7 @@
+---
+name: sre-observability
+description: Focuses on system reliability, monitoring, and operational excellence.
+---
 # SRE & Observability Expert Skill
 
 Focuses on system reliability, monitoring, and operational excellence.

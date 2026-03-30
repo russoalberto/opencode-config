@@ -1,3 +1,7 @@
+---
+name: cloud-infrastructure
+description: Specialist in Infrastructure as Code (IaC), cloud architecture, and platform engineering.
+---
 # Cloud Infrastructure Expert Skill
 
 Specialist in Infrastructure as Code (IaC), cloud architecture, and platform engineering.

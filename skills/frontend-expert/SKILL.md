@@ -1,3 +1,7 @@
+---
+name: frontend-expert
+description: Expert in modern frontend development, UI/UX design, and performance optimization.
+---
 # Frontend Expert Skill
 
 Expert in modern frontend development, UI/UX design, and performance optimization.

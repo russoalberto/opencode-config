@@ -2,19 +2,31 @@
   "$schema": "https://opencode.ai/config.json",
   "share": "disabled",
   "plugin": [
-    "@tarquinen/opencode-dcp@latest",
+    "@tarquinen/opencode-dcp@latest"
   ],
   "permission": {
     "bash": {
       "*": "ask",
       /* Block sensitive files first */
       "cat *.env": "ask",
+      "cat *.key": "ask",
+      "cat *.pem": "ask",
+      "cat *credentials*": "ask",
       "cat *history": "ask",
+      "cat *token*": "ask",
       "cat .ssh/*": "ask",
+      "cat *.tfstate*": "ask",
+      "cat *kubeconfig*": "ask",
+      "env": "ask",
       "grep * .aws/*": "ask",
       "kubectl describe secret*": "ask",
       "ls -a": "ask",
+      "printenv": "ask",
       "rg * .aws/*": "ask",
+      "docker exec *": "ask",
+      "docker run *sh*": "ask",
+      "docker run *bash*": "ask",
+      "docker run *-it*": "ask",
       /* Then allow general usage */
       "aws * describe-*": "allow",
       "aws * get-*": "allow",
@@ -25,6 +37,7 @@
       "docker logs *": "allow",
       "docker ps *": "allow",
       "du -sh *": "allow",
+      "find *": "allow",
       "git branch *": "allow",
       "git diff *": "allow",
       "git log *": "allow",
@@ -38,6 +51,12 @@
       "kubectl get *": "allow",
       "kubectl top *": "allow",
       "ls *": "allow",
+      "go test *": "allow",
+      "go vet *": "allow",
+      "golangci-lint *": "allow",
+      "pytest *": "allow",
+      "ruff *": "allow",
+      "mypy *": "allow",
       "npm run lint *": "allow",
       "npm test *": "allow",
       "ng *": "allow",
@@ -51,6 +70,7 @@
       "terraform plan *": "allow",
       "terraform show *": "allow",
       "terraform state list *": "allow",
+      "wc *": "allow",
       "whoami": "allow"
     },
     "edit": "allow",
@@ -71,7 +91,9 @@
       "**/**/*.log",
       "**/.venv/**",
       "**/__pycache__/**",
-      "**/.DS_Store"
+      "**/.DS_Store",
+      "**/*.tfstate",
+      "**/*.sqlite3"
     ]
   },
   "compaction": {
