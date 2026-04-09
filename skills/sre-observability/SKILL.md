@@ -21,3 +21,14 @@ Focuses on system reliability, monitoring, and operational excellence.
 - Instrument code with OpenTelemetry for better visibility.
 - Monitor error rates, latency, and resource utilization.
 - Implement health checks and automated recovery where possible.
+
+## Must Do
+- ALWAYS define and publish SLIs/SLOs for critical services.
+- ALWAYS implement structured logging with correlation IDs for traceability.
+- ALWAYS set up alerting with actionable runbooks and escalation paths.
+- ALWAYS test failover mechanisms and disaster recovery procedures.
+
+## Must Not Do
+- NEVER alert on symptoms without linking to a documented runbook.
+- NEVER use log-based metrics for SLOs without sampling correctness guarantees.
+- NEVER silence alerts without a tracked remediation plan.

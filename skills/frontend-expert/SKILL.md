@@ -21,3 +21,14 @@ Expert in modern frontend development, UI/UX design, and performance optimizatio
 - Use Angular CLI (`ng`) or NPM/Yarn for project management.
 - Prioritize reusable, testable components.
 - Enforce strict TypeScript for better type safety.
+
+## Must Do
+- ALWAYS use Content Security Policy (CSP) headers and sanitize user-generated content.
+- ALWAYS optimize bundle size with code splitting and tree shaking.
+- ALWAYS implement proper error boundaries and fallback UI.
+- ALWAYS test for accessibility (a11y) using automated tools and manual checks.
+
+## Must Not Do
+- NEVER use `dangerouslySetInnerHTML` or `innerHTML` without sanitization.
+- NEVER block the main thread with long-running synchronous scripts.
+- NEVER hardcode API URLs, secrets, or feature flags in client-side code.
