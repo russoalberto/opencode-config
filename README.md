@@ -40,10 +40,53 @@ The agent can dynamically adopt specialized personas to provide expert-level ass
 | ☁️ **cloud-infrastructure** | Specialist in Terraform/OpenTofu, AWS/GCP, and IaC security. |
 | 📊 **sre-observability** | Focuses on Prometheus, Grafana, OpenTelemetry, and SLIs/SLOs. |
 
+### Skills from [skills.sh](https://skills.sh/)
+Additional battle-tested skills installed from the open agent skills ecosystem:
+
+| Skill | Source | Description |
+| :--- | :--- | :--- |
+| 🗂️ **find-skills** | skills.sh | Discover and install agent skills from the open ecosystem. |
+| 🔍 **systematic-debugging** | obra/superpowers (41.8K installs) | Structured 4-phase root-cause debugging methodology. |
+| 🧪 **test-driven-development** | obra/superpowers (35.4K installs) | Red-green-refactor TDD cycle with iron law: no production code without failing test first. |
+| ✅ **verification-before-completion** | obra/superpowers (28.7K installs) | Requires running verification commands and confirming output before marking work complete. |
+| 📐 **terraform-style-guide** | hashicorp/agent-skills (2.9K installs) | Official HashiCorp Terraform HCL style conventions and code generation patterns. |
+| ☸️ **k8s-manifest-generator** | wshobson/agents (30.6K installs) | Production-ready Kubernetes manifests (Deployments, Services, ConfigMaps, Secrets). |
+| 🔗 **api-design-principles** | wshobson/agents (15.3K installs) | REST and GraphQL API design patterns, versioning, error handling, and DataLoaders. |
+
+**Install commands:**
+```bash
+npx skills add vercel-labs/skills@find-skills -g -y
+npx skills add hashicorp/agent-skills@terraform-style-guide -g -y
+npx skills add wshobson/agents@k8s-manifest-generator -g -y
+npx skills add wshobson/agents@api-design-principles -g -y
+```
+
 ## 🔌 External Integrations (MCP)
 - **Exa:** Secure web search for current information and news.
 - **Context7:** Real-time documentation and code examples for libraries and frameworks.
 - **GitHub:** Direct integration for managing issues, pull requests, and repository data.
+
+## 🧹 Context Management (DCP)
+This configuration includes **Dynamic Context Pruning (DCP)** to maintain optimal context window usage:
+- Automatically compresses older conversation turns
+- Protects MCP tool outputs and recent (5-turn) history
+- Model-specific context limits for optimal performance
+- Configured in `dcp.jsonc`
+
+## ✅ Validation
+```bash
+# Check opencode configuration
+opencode config validate
+
+# Verify skills installations
+npx skills check
+```
+
+## 🐛 Troubleshooting
+- **Skills not loading:** Run `npx skills check` to verify installations, then `npx skills update` to refresh.
+- **MCP errors:** Ensure `EXA_API_KEY`, `CONTEXT7_API_KEY`, and `GITHUB_TOKEN` are set in your environment.
+- **Context issues:** DCP automatically manages context; check `dcp.jsonc` for tuning.
+- **Permission errors:** Check `opencode.jsonc` bash section for `allow`/`ask` patterns.
 
 ## 💡 Usage Guidelines
 To get the best results, you can prompt the agent either implicitly or explicitly:
