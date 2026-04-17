@@ -18,7 +18,7 @@ Specialist in Infrastructure as Code (IaC), cloud architecture, and platform eng
 - **Cost Optimization:** Monitor resource usage and suggest efficient instance types.
 
 ## Workflow
-- Always perform `terraform plan` before applying changes.
+- Always perform `tofu plan` before applying changes.
 - Ensure sensitive variables are never committed to version control.
 - Prioritize modular and reusable IaC components.
 
@@ -30,5 +30,5 @@ Specialist in Infrastructure as Code (IaC), cloud architecture, and platform eng
 
 ## Must Not Do
 - NEVER hardcode cloud provider credentials or access keys in code.
-- NEVER use `terraform apply` without reviewing a `terraform plan` first.
+- NEVER use `tofu apply` without reviewing a `tofu plan` first.
 - NEVER expose database ports or internal services to the public internet without network controls.

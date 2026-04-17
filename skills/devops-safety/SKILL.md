@@ -6,8 +6,8 @@ description: Intercept all destructive or production-altering commands
 Intercept all destructive or production-altering commands to ensure infrastructure stability.
 
 ## Intercept Rules
-- **Destructive Commands**: `terraform destroy`, `rm -rf`, `kubectl delete` (except pods), `aws rds delete-db-instance`, `helm uninstall`, `docker system prune`, `docker system prune -a`, `aws s3 rb --force`, `kubectl delete namespace`.
-- **Environment Awareness**: If `PWD` contains `prod`, `production`, `main`, or if the terraform workspace is `prod`.
+- **Destructive Commands**: `tofu destroy`, `rm -rf`, `kubectl delete` (except pods), `aws rds delete-db-instance`, `helm uninstall`, `docker system prune`, `docker system prune -a`, `aws s3 rb --force`, `kubectl delete namespace`.
+- **Environment Awareness**: If `PWD` contains `prod`, `production`, `main`, or if the tofu workspace is `prod`.
 
 ## Mandatory Workflow
 1. **INTERCEPT**: You MUST NOT execute the command immediately.

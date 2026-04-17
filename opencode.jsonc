@@ -102,6 +102,9 @@
       "terraform plan *": "allow",
       "terraform show *": "allow",
       "terraform state list *": "allow",
+      "tofu plan *": "allow",
+      "tofu show *": "allow",
+      "tofu state list *": "allow",
       "wc *": "allow",
       "whoami": "allow"
     },
