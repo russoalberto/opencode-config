@@ -142,17 +142,17 @@
     "CONTRIBUTING.md"
   ],
   "mcp": {
-    "exa": {
-      "type": "remote",
-      "url": "https://mcp.exa.ai/mcp?exaApiKey={env:EXA_API_KEY}",
-      "enabled": true
-    },
     "context7": {
       "type": "remote",
       "url": "https://mcp.context7.com/mcp",
       "headers": {
         "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
       },
+      "enabled": true
+    },
+    "exa": {
+      "type": "remote",
+      "url": "https://mcp.exa.ai/mcp?exaApiKey={env:EXA_API_KEY}",
       "enabled": true
     },
     "github": {
@@ -165,6 +165,14 @@
       "environment": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "{env:GITHUB_TOKEN}"
       },
+      "enabled": true
+    },
+    "playwright": {
+      "type": "local",
+      "command": [
+        "npx",
+        "@playwright/mcp@latest"
+      ],
       "enabled": true
     }
   }
