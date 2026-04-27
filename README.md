@@ -21,6 +21,13 @@ A hybrid permission model is used to maximize developer velocity:
 - **Safe Shell Commands (`allow`):** Read-only and build-related commands are pre-approved (e.g., `npm install`, `ng build`, `tsc`, `git status`, `terraform plan`, `docker ps`).
 - **Sensitive Operations (`ask`):** Any command that reads secrets or modifies remote environments (e.g., `cat *.env`, `terraform apply`, `kubectl delete`) requires manual user approval.
 
+### 4. Token-Optimized Commands (RTK)
+The RTK plugin rewrites all Bash commands to token-efficient equivalents, compressing output without changing behavior.
+
+- **Transparent Rewriting:** Every Bash command is automatically rewritten — e.g., `git status` -> `rtk git status` — producing compact output.
+- **Risk-Based Permissions:** Read-only and lint/check subcommands are pre-approved. Destructive proxies (`rtk docker`, `rtk git`, `rtk aws`, `rtk run`, etc.) require manual approval, mirroring the security model for native commands.
+- **Savings Tracking:** `rtk gain` shows cumulative token savings; `rtk session` shows session-level adoption.
+
 ## 🛠️ Global Guardrails (`AGENTS.md`)
 The `AGENTS.md` file is injected into every session, ensuring consistent behavior across all tasks. It mandates:
 - **Verification:** Always running tests, linters, or build commands after code changes.
@@ -40,15 +47,14 @@ The agent can dynamically adopt specialized personas to provide expert-level ass
 | ☁️ **cloud-infrastructure** | Specialist in Terraform/OpenTofu, AWS/GCP, and IaC security. |
 | 📊 **sre-observability** | Focuses on Prometheus, Grafana, OpenTelemetry, and SLIs/SLOs. |
 
+> **Note:** `systematic-debugging`, `test-driven-development`, and `verification-before-completion` are now served by the superpowers plugin (see `opencode.jsonc` plugins) and no longer need separate skill installs.
+
 ### Skills from [skills.sh](https://skills.sh/)
 Additional battle-tested skills installed from the open agent skills ecosystem:
 
 | Skill | Source | Description |
 | :--- | :--- | :--- |
 | 🗂️ **find-skills** | skills.sh | Discover and install agent skills from the open ecosystem. |
-| 🔍 **systematic-debugging** | obra/superpowers (41.8K installs) | Structured 4-phase root-cause debugging methodology. |
-| 🧪 **test-driven-development** | obra/superpowers (35.4K installs) | Red-green-refactor TDD cycle with iron law: no production code without failing test first. |
-| ✅ **verification-before-completion** | obra/superpowers (28.7K installs) | Requires running verification commands and confirming output before marking work complete. |
 | 📐 **terraform-style-guide** | hashicorp/agent-skills (2.9K installs) | Official HashiCorp Terraform HCL style conventions and code generation patterns. |
 | ☸️ **k8s-manifest-generator** | wshobson/agents (30.6K installs) | Production-ready Kubernetes manifests (Deployments, Services, ConfigMaps, Secrets). |
 | 🔗 **api-design-principles** | wshobson/agents (15.3K installs) | REST and GraphQL API design patterns, versioning, error handling, and DataLoaders. |

@@ -28,6 +28,7 @@ You are an expert full-stack and DevOps agent. Your flow is secure by design.
 - **Docker:** `docker build .`, `docker compose up -d`
 - **Kubernetes:** `kubectl get`, `kubectl describe`
 - Always run the relevant linter/test after editing a file. If unsure which stack, check `package.json`, `go.mod`, `requirements.txt`, or `Makefile` in the project root.
+- **RTK (Rust Token Killer):** Bash commands are automatically rewritten through `rtk` for token-optimized output. Read-only and lint/check rtk subcommands are pre-approved; destructive proxies (`rtk docker`, `rtk git`, `rtk run`, etc.) require manual approval.
 
 ## 🔀 Git Safety
 - NEVER use `git push --force` on shared branches.
