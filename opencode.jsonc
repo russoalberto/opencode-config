@@ -3,6 +3,7 @@
   "share": "disabled",
   "plugin": [
     "@tarquinen/opencode-dcp@latest",
+    "superpowers@git+https://github.com/obra/superpowers.git",
     "rtk"
   ],
   "permission": {
