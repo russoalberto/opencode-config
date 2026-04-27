@@ -21,6 +21,8 @@
       "opencode-go/mimo-v2-omni": 15000,
       "opencode-go/qwen3.6-plus": 25000,
       "opencode-go/qwen3.5-plus": 20000,
+      "opencode-go/deepseek-v4-flash": 20000,
+      "opencode-go/deepseek-v4-pro": 25000,
       "opencode-go/kimi-k2.6": 20000,
       "opencode-go/mimo-v2.5": 15000,
       "opencode-go/mimo-v2.5-pro": "40%"
@@ -35,6 +37,8 @@
       "opencode-go/mimo-v2-omni": 50000,
       "opencode-go/qwen3.6-plus": "70%",
       "opencode-go/qwen3.5-plus": "65%",
+      "opencode-go/deepseek-v4-flash": "65%",
+      "opencode-go/deepseek-v4-pro": "70%",
       "opencode-go/kimi-k2.6": 55000,
       "opencode-go/mimo-v2.5": 50000,
       "opencode-go/mimo-v2.5-pro": "75%"
