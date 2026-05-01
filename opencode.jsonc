@@ -18,8 +18,8 @@
       "cat *history": "ask",
       "cat *kubeconfig*": "ask",
       "cat *token*": "ask",
-      "cat.env*": "ask",
-      "cat.ssh/*": "ask",
+      "cat .env*": "ask",
+      "cat .ssh/*": "ask",
       "docker exec *": "ask",
       "docker run *-it*": "ask",
       "docker run *bash*": "ask",
@@ -61,9 +61,7 @@
     "reserved": 15000
   },
   "instructions": [
-    ".cursor/rules/*.md",
-    "AGENTS.md",
-    "CONTRIBUTING.md"
+    "AGENTS.md"
   ],
   "mcp": {
     "context7": {

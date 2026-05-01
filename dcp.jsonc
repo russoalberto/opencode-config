@@ -5,45 +5,17 @@
   "pruneNotification": "minimal",
   "pruneNotificationType": "toast",
   "commands": {
-    "enabled": true,
     // Protect all MCP tool outputs from manual /dcp sweep
     "protectedTools": ["mcp_*"]
   },
-  "manualMode": {
-    "enabled": false,
-    "automaticStrategies": true
-  },
-  "turnProtection": {
-    "enabled": true,
-    // Protect last 5 turns — kubectl/terraform outputs stay relevant
-    "turns": 5
-  },
-  "experimental": {
-    "allowSubAgents": false,
-    "customPrompts": false
-  },
   "compress": {
-    "mode": "range",
-    "permission": "allow",
-    "summaryBuffer": true,
     "maxContextLimit": 120000,
-    "minContextLimit": 20000,
-    "nudgeFrequency": 3,
-    "iterationNudgeThreshold": 7,
-    "nudgeForce": "strong",
-    "protectedTools": [],
-    "protectUserMessages": true
+    "minContextLimit": 20000
   },
   "strategies": {
     "deduplication": {
-      "enabled": true,
       // Prevent MCP outputs (exa/context7/github) from being deduped away
       "protectedTools": ["mcp_*"]
-    },
-    "purgeErrors": {
-      "enabled": true,
-      "turns": 2,
-      "protectedTools": []
     }
   }
 }
