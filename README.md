@@ -59,9 +59,20 @@ Additional battle-tested skills installed from the open agent skills ecosystem:
 | ☸️ **k8s-manifest-generator** | wshobson/agents (30.6K installs) | Production-ready Kubernetes manifests (Deployments, Services, ConfigMaps, Secrets). |
 | 🔗 **api-design-principles** | wshobson/agents (15.3K installs) | REST and GraphQL API design patterns, versioning, error handling, and DataLoaders. |
 
+### Caveman Skills
+Token-optimized communication skills for ultra-compressed agent interaction, installed from `skill://caveman`:
+
+| Skill | Description |
+| :--- | :--- |
+| 🦴 **caveman** | Ultra-compressed communication mode (~75% token reduction). Supports `lite`, `full`, `ultra`, and `wenyan` intensities. |
+| 📝 **caveman-commit** | Ultra-compressed Conventional Commits (subject ≤50 chars). Auto-triggers on staging changes. |
+| ℹ️ **caveman-help** | Quick-reference card for all caveman modes, skills, and commands. |
+| 📊 **caveman-stats** | Real token usage and estimated savings for the current session. Reads from Claude Code session log. |
+
 **Install commands:**
 ```bash
-npx skills add vercel-labs/skills@find-skills -g -y
+npx -y skills add JuliusBrussee/caveman -a opencode
+npx -y skills add vercel-labs/skills@find-skills -g -y
 npx skills add hashicorp/agent-skills@terraform-style-guide -g -y
 npx skills add wshobson/agents@k8s-manifest-generator -g -y
 npx skills add wshobson/agents@api-design-principles -g -y
@@ -78,6 +89,16 @@ This configuration includes **Dynamic Context Pruning (DCP)** to maintain optima
 - Protects MCP tool outputs and recent (5-turn) history
 - Model-specific context limits for optimal performance
 - Configured in `dcp.jsonc`
+
+## 🔌 Plugin System
+
+Plugins extend opencode's core functionality. Configured under `plugin` in `opencode.jsonc`:
+
+| Plugin | Source | Purpose |
+| :--- | :--- | :--- |
+| 🧠 **DCP** | `@tarquinen/opencode-dcp` | Dynamic Context Pruning — auto-compresses stale conversation turns to maintain context window budget. Configured in `dcp.jsonc`. |
+| ⚡ **Superpowers** | `obra/superpowers` | Skill-based workflow system providing structured processes for brainstorming, TDD, systematic debugging, code review, plan writing, and more. See `@skills/` and `AGENTS.md`. |
+| 🗜️ **RTK** | opencode-bundled | Reduced Token Kernel — rewrites bash commands for token-efficient output. Transparent `rtk` proxy with automatic compression of shell output. |
 
 ## ✅ Validation
 ```bash
