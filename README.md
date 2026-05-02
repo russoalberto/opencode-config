@@ -46,6 +46,7 @@ The agent can dynamically adopt specialized personas to provide expert-level ass
 | 🎨 **frontend-expert** | Expert in Angular (standalone, RxJS, NgRx), React, Vue, UI/UX, and a11y. |
 | ☁️ **cloud-infrastructure** | Specialist in Terraform/OpenTofu, AWS/GCP, and IaC security. |
 | 📊 **sre-observability** | Focuses on Prometheus, Grafana, OpenTelemetry, and SLIs/SLOs. |
+| 📋 **planning-with-files** | Manus-style file-based planning (`task_plan.md`, `findings.md`, `progress.md`). Auto session recovery after `/clear`. Multi-lang: ar, de, es, zh, zht. |
 
 > **Note:** `systematic-debugging`, `test-driven-development`, and `verification-before-completion` are now served by the superpowers plugin (see `opencode.jsonc` plugins) and no longer need separate skill installs.
 
