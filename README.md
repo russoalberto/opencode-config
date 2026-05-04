@@ -38,17 +38,40 @@ The agent can dynamically adopt specialized personas to provide expert-level ass
 
 | Skill | Description |
 | :--- | :--- |
-| 🛡️ **devops-safety** | Intercepts all destructive or production-altering commands. |
-| 🔒 **security-auditor** | Specialist in secure coding, OWASP Top 10, and vulnerability assessment. |
-| ⚙️ **backend-architect** | Expert in API design, microservices, and scalable backend systems. |
-| 🗄️ **database-expert** | Specialist in SQL/NoSQL optimization, schema design, and migrations. |
-| 🚀 **cicd-automation** | Expert in Docker, Kubernetes, GitHub Actions, and pipelines. |
-| 🎨 **frontend-expert** | Expert in Angular (standalone, RxJS, NgRx), React, Vue, UI/UX, and a11y. |
-| ☁️ **cloud-infrastructure** | Specialist in Terraform/OpenTofu, AWS/GCP, and IaC security. |
-| 📊 **sre-observability** | Focuses on Prometheus, Grafana, OpenTelemetry, and SLIs/SLOs. |
-| 📋 **planning-with-files** | Manus-style file-based planning (`task_plan.md`, `findings.md`, `progress.md`). Auto session recovery after `/clear`. Multi-lang: ar, de, es, zh, zht. |
+| 🛡️ **devops-safety** | Use when executing destructive commands, managing production environments, or deploying to critical systems. |
+| 🔒 **security-auditor** | Use when auditing code for vulnerabilities, implementing auth, or reviewing security posture. |
+| ⚙️ **backend-architect** | Use when designing APIs, reviewing backend architecture, or establishing service boundaries. |
+| 🗄️ **database-expert** | Use when optimizing queries, designing schemas, planning migrations, or choosing storage solutions. |
+| 🚀 **cicd-automation** | Use when designing CI/CD pipelines, containerizing apps, or automating deployments. |
+| 🎨 **frontend-expert** | Use when building UI components, optimizing frontend performance, or implementing responsive design. |
+| ☁️ **cloud-infrastructure** | Use when provisioning cloud resources, designing network topology, or writing Terraform/OpenTofu modules. |
+| 📊 **sre-observability** | Use when setting up monitoring, defining SLOs, investigating incidents, or designing observability strategy. |
+
+### Skill Structure
+Each skill follows a standardized format optimized for agent discovery (CSO) and usability:
+
+- **When to Use / When NOT to Use** — Explicit triggering conditions and boundary guidance with cross-skill routing.
+- **Quick Reference** — Scan-friendly table for common scenarios and recommended actions.
+- **Must Do / Must Not Do** — Non-negotiable rules for each domain.
+- **Common Mistakes** — Documented failure modes with fixes.
+- **Cross-References** — `REQUIRED SUB-SKILL` for blocking dependencies, `RECOMMENDED` for enhancements.
+
+### Skill Dependencies
+Skills reference each other to ensure holistic domain coverage:
+
+```
+cloud-infrastructure ──REQUIRED──▶ devops-safety (destructive commands, --force flags)
+cloud-infrastructure ──REQUIRED──▶ security-auditor (IAM policy and network security review)
+devops-safety        ──REQUIRED──▶ cloud-infrastructure (impact analysis for destructive actions)
+security-auditor     ──REQUIRED──▶ cloud-infrastructure (IAM and network security review)
+                                   All other cross-references are RECOMMENDED (enhancement, non-blocking).
+```
+
+All skills stay under ~550 words each (average ~420) for minimal context overhead.
 
 > **Note:** `systematic-debugging`, `test-driven-development`, and `verification-before-completion` are now served by the superpowers plugin (see `opencode.jsonc` plugins) and no longer need separate skill installs.
+
+Skills are loaded from two directories: `~/.config/opencode/skills/` (custom domain skills) and `~/.agents/skills/` (community-installed skills — see below).
 
 ### Skills from [skills.sh](https://skills.sh/)
 Additional battle-tested skills installed from the open agent skills ecosystem:
@@ -69,6 +92,7 @@ Token-optimized communication skills for ultra-compressed agent interaction, ins
 | 📝 **caveman-commit** | Ultra-compressed Conventional Commits (subject ≤50 chars). Auto-triggers on staging changes. |
 | ℹ️ **caveman-help** | Quick-reference card for all caveman modes, skills, and commands. |
 | 📊 **caveman-stats** | Real token usage and estimated savings for the current session. Reads from Claude Code session log. |
+| 🤖 **cavecrew** | Subagent delegation guide — WHEN to spawn investigator, builder, or reviewer subagents. 60% compressed output. |
 
 **Install commands:**
 ```bash
@@ -117,9 +141,12 @@ npx skills check
 - **Permission errors:** Check `opencode.jsonc` bash section for `allow`/`ask` patterns.
 
 ## 💡 Usage Guidelines
-To get the best results, you can prompt the agent either implicitly or explicitly:
-- **Implicit:** *"Add a new Angular component for the dashboard."* (Agent loads `frontend-expert` automatically).
-- **Explicit:** *"Act as my `cloud-infrastructure` expert and review this Terraform module."* (Forces specific mindset).
+Skills are auto-discovered via their `Use when...` description triggers in the frontmatter. You can prompt the agent either implicitly or explicitly:
+
+- **Implicit:** *"Design an API for user management."* (Agent matches `backend-architect` `Use when designing APIs...`)
+- **Implicit:** *"Our Docker images are too large and deployments are flaky."* (Agent matches `cicd-automation` symptom keywords: "deployments are manual, flaky, or slow, or when Docker images are bloated")
+- **Explicit:** *"Act as my `cloud-infrastructure` expert and review this Terraform module."* (Forces specific skill regardless of description match)
+- **Cross-Skill:** *"Run `tofu destroy` on this module."* (Agent loads `devops-safety` for the destructive command, which requires `cloud-infrastructure` for impact analysis)
 
 ---
 *This configuration is model-agnostic and designed to provide a consistent, secure, and high-velocity experience across any supported AI model.*
