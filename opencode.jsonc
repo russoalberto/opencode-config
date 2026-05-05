@@ -61,7 +61,10 @@
     "reserved": 15000
   },
   "instructions": [
-    "AGENTS.md"
+    "~/.config/opencode/AGENTS.md",
+    ".cursor/rules/*.md",
+    "AGENTS.md",
+    "CONTRIBUTING.md"
   ],
   "mcp": {
     "context7": {
