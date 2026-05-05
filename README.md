@@ -123,7 +123,7 @@ Plugins extend opencode's core functionality. Configured under `plugin` in `open
 | :--- | :--- | :--- |
 | 🧠 **DCP** | `@tarquinen/opencode-dcp` | Dynamic Context Pruning — auto-compresses stale conversation turns to maintain context window budget. Configured in `dcp.jsonc`. |
 | ⚡ **Superpowers** | `obra/superpowers` | Skill-based workflow system providing structured processes for brainstorming, TDD, systematic debugging, code review, plan writing, and more. See `@skills/` and `AGENTS.md`. |
-| 🗜️ **RTK** | opencode-bundled | Reduced Token Kernel — rewrites bash commands for token-efficient output. Transparent `rtk` proxy with automatic compression of shell output. |
+| 🗜️ **RTK** | opencode-bundled | Reduced Token Kernel — rewrites bash commands for token-efficient output. Transparent `rtk` proxy with automatic compression of shell output. See [Installation Guide](https://github.com/rtk-ai/rtk#installation) for standalone setup options (Homebrew, Cargo, quick install script). |
 
 ## ✅ Validation
 ```bash
